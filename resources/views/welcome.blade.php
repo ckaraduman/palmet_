@@ -6,6 +6,7 @@
 
         <title>Palmet</title>
         <h2>Cem İlker Karaduman 29.08.2022 01:18 AM</h2>
+        <h3>CopyRight'2022 by Cem İlker Karaduman</h3>
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
