@@ -19,3 +19,7 @@ Route::get('/', function () {
 Route::get('/hgf_dashboard', function () {
     return view('hgf_dashboard');
 })->name('hgf');
+
+Route::get('/test', function () {
+    return view('test');
+})->name('test');
