@@ -27,7 +27,7 @@
             Action
           </a>
           <ul class="dropdown-menu dropdown-menu-dark">
-            <li><a class="dropdown-item" href="#">HGF DashBoard</a></li>
+            <li><a class="dropdown-item" href="{{route('hgf')}}">HGF DashBoard</a></li>
             <li><a class="dropdown-item" href="#">Settings</a></li>
             <li><a class="dropdown-item" href="#">Exit</a></li>
           </ul>
