@@ -6,6 +6,9 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <style type="text/css">
+  #headingOne {
+    font-style: italic;
+  }
 body {
 -moz-transform: scale(0.8, 0.8); /* Moz-browsers */
 zoom: 0.8; /* Other non-webkit browsers */
@@ -30,7 +33,7 @@ zoom: 80%; /* Webkit browsers */
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingOne">
       <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-        Power Plants
+        <p style="color:Orange;">Power Plants</p>
       </button>
     </h2>
     <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
