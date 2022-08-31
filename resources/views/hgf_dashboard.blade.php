@@ -22,7 +22,9 @@ zoom: 80%; /* Webkit browsers */
  </div> 
 
 
-
+      <table class="table table-bordered"> 
+            <th width=100px><strong>Tüketim Noktası</strong></th><th width=100px><strong>Tüketim</strong></th><th width=100px><strong>Tüketim Bütçe</strong></th><th width=100px><strong>Taşıma</strong></th><th width=100px><strong>Taşıma Bütçesi</strong></th>
+      </table>
  <div class="accordion" id="accordionExample">
 
   <div class="accordion-item">
@@ -41,7 +43,6 @@ zoom: 80%; /* Webkit browsers */
     </div>
   </div>
 
-
   <div class="accordion-item">
     <h2 class="accordion-header" id="heading1">
       <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
@@ -53,11 +54,13 @@ zoom: 80%; /* Webkit browsers */
         <!-- <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow. -->
 
         <!-- <strong>İzgaz</strong><br> -->
-
+        
         <div class="accordion-item">
           <h2 class="accordion-header" id="heading11">
             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse11" aria-expanded="true" aria-controls="collapse11">
-              <strong>İzgaz</strong>
+            <table class="table table-bordered"> 
+            <th><strong>İzgaz</strong></th><th><strong>dfgdfg</strong></th>
+            </table>
             </button>
           </h2>
           <div id="collapse11" class="accordion-collapse collapse" aria-labelledby="heading11" data-bs-parent="#heading1">
@@ -68,7 +71,7 @@ zoom: 80%; /* Webkit browsers */
             </div>
           </div>
         </div>
-
+       
         <!-- <strong>İzgaz</strong><br> -->
 
         <!-- <strong>Palgaz</strong><br> -->
