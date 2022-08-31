@@ -23,3 +23,5 @@ Route::get('/hgf_dashboard', function () {
 Route::get('/test', function () {
     return view('test');
 })->name('test');
+
+Route::get('page1', 'App\Http\Controllers\Page1Controller@index');
