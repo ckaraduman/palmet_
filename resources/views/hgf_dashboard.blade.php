@@ -6,13 +6,18 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <style type="text/css">
-  #headingOne {
-    font-style: italic;
-  }
 body {
 -moz-transform: scale(0.8, 0.8); /* Moz-browsers */
 zoom: 0.8; /* Other non-webkit browsers */
 zoom: 80%; /* Webkit browsers */
+}
+#headingOne1 {
+-moz-transform: scale(0.5, 0.5); /* Moz-browsers */
+zoom: 0.5; /* Other non-webkit browsers */
+zoom: 50%; /* Webkit browsers */
+}
+#headingOne {
+  font-size: 40px;
 }
       </style>
 <body>
@@ -24,16 +29,20 @@ zoom: 80%; /* Webkit browsers */
     <div class="col text-right"><button type="button" class="btn btn-light">Exit</button></div> 
  </div> 
 
+ <div class="row">
+    <div class="col text-left"><b>Tüketim Noktası</b></div>
+    <div class="col text-left"><b>Tüketim</b></div>
+    <div class="col text-left"><b>Tüketim Bütçesi</b></div>
+    <div class="col text-left"><b>Taşıma</b></div>
+    <div class="col text-left"><b>Taşıma Bütçesi</b></div>
+ </div> 
 
-      <table class="table table-bordered"> 
-            <th width=100px><strong>Tüketim Noktası</strong></th><th width=100px><strong>Tüketim</strong></th><th width=100px><strong>Tüketim Bütçe</strong></th><th width=100px><strong>Taşıma</strong></th><th width=100px><strong>Taşıma Bütçesi</strong></th>
-      </table>
  <div class="accordion" id="accordionExample">
 
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingOne">
       <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-        <p style="color:Orange;">Power Plants</p>
+      Power Plants
       </button>
     </h2>
     <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">

@@ -8,8 +8,13 @@ class Page1Controller extends Controller
 {
     public function index()
     {
-        $data=DB::table('Points')->get();
+        $data=DB::table('Points')-> get();
         // dd($data);
-        return $data;
+        // return $data;
+        foreach ($data as $key)
+        {
+            echo $key->Name;
+            echo "<br>";
+        }
     }
 }
