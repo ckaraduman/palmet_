@@ -13,8 +13,11 @@ class Page1Controller extends Controller
         // return $data;
         foreach ($data as $key)
         {
-            echo $key->Name;
-            echo "<br>";
+            echo "<table border=2>";
+            echo "<tr><td width=300>".$key->Name."</td>";
+            echo "<td width=300>".$key->NoktaKodu."</td></tr>";
+            echo "</table>";
         }
+
     }
 }
