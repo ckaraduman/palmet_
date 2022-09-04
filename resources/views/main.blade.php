@@ -37,4 +37,5 @@
   </div>
 </nav>
 <hr>
+{{$ad}}
 </html>
