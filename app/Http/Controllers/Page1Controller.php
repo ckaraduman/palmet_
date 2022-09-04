@@ -10,7 +10,7 @@ class Page1Controller extends Controller
     {
         $data=DB::table('Points')
                   -> where('id',1)
-                  -> value('distributor');
+                  -> value('name');
         // dd($data);
         // return $data;
         $data = [
