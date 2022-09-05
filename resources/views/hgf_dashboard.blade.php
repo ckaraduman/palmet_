@@ -21,13 +21,15 @@ zoom: 50%; /* Webkit browsers */
 }
       </style>
 <body>
-
+<form method="post">
+  @CSRF
 <div class="row">
     <div class="col text-left"><b>&nbsp;&nbsp;&nbsp;&nbsp;HGF DASHBOARD</b></div>
     <div class="col text-right"><b>First Date&nbsp;&nbsp;&nbsp;&nbsp;<input type="date" name="date1"></b><b>&nbsp;&nbsp;&nbsp;&nbsp;Last Date&nbsp;&nbsp;&nbsp;&nbsp;<input type="date" name="date2">&nbsp;&nbsp;&nbsp;&nbsp;</b><input type="submit" name="list" id="list" value="  List  "></div>
     <!-- <div class="col text-left"><b>Last Date&nbsp;&nbsp;&nbsp;&nbsp;<input type="date" name="date2">&nbsp;&nbsp;&nbsp;&nbsp;</b></div> -->
     <div class="col text-right"><button type="button" class="btn btn-light">Exit</button></div> 
- </div> 
+ </div>
+</form> 
 
  <div class="row">
     <div class="col text-left"><b>Tüketim Noktası</b></div>
@@ -147,5 +149,17 @@ zoom: 50%; /* Webkit browsers */
       </div>
     </div>
   </div>
+  <?php
+  $date1 = $date2 = "";
+  if ($_SERVER["REQUEST_METHOD"] == "POST") {
+          $date1 = $_POST["date1"];
+          $date2 = $_POST["date2"];
+          // $email = test_input($_POST["email"]);
+          // $review = test_input($_POST["review"]);
+          // $level = test_input($_POST["level"]);
+        }
+        // echo $date;
+  ?>
+  {{$date1}}    {{$date2}}
   </body>
 </html>

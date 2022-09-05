@@ -16,7 +16,7 @@ class Page1Controller extends Controller
         $data = [
              "ad"=>($data)
          ];
-        return view('main', $data);
+        return view('show', $data);
         // foreach ($data as $key)
         // {
         //     echo "<table border=2>";
@@ -26,4 +26,9 @@ class Page1Controller extends Controller
         // }
 
     }
+    public function formtest()
+    {
+        return view('form');
+    }
+
 }
