@@ -5,7 +5,7 @@
 </head>
 
 <body>
-	<!-- <?php
+	  @php
 		$name = $email = $level = $review = "";
 
 		if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -21,7 +21,8 @@
 		$data = htmlspecialchars($data);
 		return $data;
 		}
-		?> -->
+
+		@endphp
 
 		<h2>PHP Form Example: GFG Review</h2>
 		<form method="post">
@@ -53,7 +54,7 @@
 				value="Submit">
 		</form>
 
-		<?php
+		@php
 			echo "<h2>Your Input:</h2>";
 			echo $name;
 			echo "<br>";
@@ -62,7 +63,7 @@
 			echo $review;
 			echo "<br>";
 			echo $level;
-		?>
+		@endphp
 </body>
 
 </html>

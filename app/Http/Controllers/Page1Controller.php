@@ -9,19 +9,31 @@ class Page1Controller extends Controller
     public function index()
     {
         $data=DB::table('Points')
-                  -> where('id',1)
+                  -> where('id',60)
                   -> value('name');
-        // dd($data);
-        // return $data;
-        $data = [
-             "ad"=>($data)
-         ];
-        return view('show', $data);
+        $data1=[DB::table('Points')
+                  // -> where('id',60)
+                  -> value('name')];
+        //dd($data);
+        //return $data;
+
+        foreach($data1 as $key){
+        echo $key;
+        }
+
+
+
+        // $data = [
+        //      //"ad"=>($data)
+        //      "ad"=>($key->Name)
+        //  ];
+        // return view('show', $data);
+        // }
         // foreach ($data as $key)
         // {
         //     echo "<table border=2>";
         //     echo "<tr><td width=300>".$key->Name."</td>";
-        //     echo "<td width=300>".$key->NoktaKodu."</td></tr>";
+        //     //echo "<td width=300>".$key->NoktaKodu."</td></tr>";
         //     echo "</table>";
         // }
 
