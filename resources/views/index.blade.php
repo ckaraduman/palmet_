@@ -57,7 +57,7 @@
 @endwhile
 <!-- *********************************************************************** -->
 <br>
-<!-- dizi elemanları varsa dizi elelmanları yazdırılır yoksa mesaj yazılır * -->
+<!-- dizi elemanları varsa dizi elemanları yazdırılır yoksa mesaj yazılır * -->
 @php($dizi1=[])
 @forelse($dizi1 as $key) <!--$dizi kullanılırsa elemanlar geliyor! -->
   <li>{{$key}}</li>
