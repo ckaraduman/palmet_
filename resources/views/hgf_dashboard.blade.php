@@ -42,7 +42,6 @@ zoom: 50%; /* Webkit browsers */
       <td width="40%"></td>
     </tr>
   </table>
-
 <!-- <div class="row">
     <div class="col text-left"><b>&nbsp;&nbsp;&nbsp;&nbsp;HGF DASHBOARD</b></div>
     <div class="col text-right"><b>First Date&nbsp;&nbsp;&nbsp;&nbsp;<input type="date" name="date1"></b><b>&nbsp;&nbsp;&nbsp;&nbsp;Last Date&nbsp;&nbsp;&nbsp;&nbsp;<input type="date" name="date2">&nbsp;&nbsp;&nbsp;&nbsp;</b><input type="submit" name="list" id="list" value="  List  "></div> -->
@@ -70,7 +69,7 @@ zoom: 50%; /* Webkit browsers */
   <th style="width:400px"><h6><b>Taşıma Bütçesi</b></h6></th> -->
   </tr>
   <tr>
-    <td align="left">+ Power Generation Plants</td>
+    <td align="left"><h6 onclick="change1(this)">+ Power Generation Plants</h6></td>
   </tr>
   <tr>
     <td align="left">&nbsp;&nbsp;&nbsp;&nbsp;Baymina</td>
@@ -85,12 +84,26 @@ zoom: 50%; /* Webkit browsers */
     <td align="left">+ Natural Gas Distribution Companies</td>
   </tr>
 </table>
-
-
-
-
-
-
+<!-- <script>
+function change1(id) {
+  if (id.innerHTML=="+ Power Generation Plants") {
+      id.innerHTML = "- Power Generation Plants"
+  } else if (id.innerHTML == "- Power Generation Plants") {
+    id.innerHTML = "+ Power Generation Plants"
+  }
+  // id.innerHTML = "- Power Generation Plants";
+}
+</script> -->
+<script>
+function change1(id) {
+  if (id.innerHTML=="+ Power Generation Plants") {
+      id.innerHTML = "- Power Generation Plants"
+  } else if (id.innerHTML == "- Power Generation Plants") {
+    id.innerHTML = "+ Power Generation Plants"
+  }
+  // id.innerHTML = "- Power Generation Plants";
+}
+</script>
 
   <?php
   $date1 = $date2 = "";
