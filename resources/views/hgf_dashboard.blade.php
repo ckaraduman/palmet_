@@ -19,25 +19,72 @@ zoom: 50%; /* Webkit browsers */
 #headingOne {
   font-size: 40px;
 }
+.tablo1{
+  width: 100%;
+  border:1px solid black;
+}
+.style1{
+  border:1px solid black;
+}
       </style>
 <body>
 <form method="post">
   @CSRF
-<div class="row">
-    <div class="col text-left"><b>&nbsp;&nbsp;&nbsp;&nbsp;HGF DASHBOARD</b></div>
-    <div class="col text-right"><b>First Date&nbsp;&nbsp;&nbsp;&nbsp;<input type="date" name="date1"></b><b>&nbsp;&nbsp;&nbsp;&nbsp;Last Date&nbsp;&nbsp;&nbsp;&nbsp;<input type="date" name="date2">&nbsp;&nbsp;&nbsp;&nbsp;</b><input type="submit" name="list" id="list" value="  List  "></div>
-    <!-- <div class="col text-left"><b>Last Date&nbsp;&nbsp;&nbsp;&nbsp;<input type="date" name="date2">&nbsp;&nbsp;&nbsp;&nbsp;</b></div> -->
-    <div class="col text-right"><button type="button" class="btn btn-light">Exit</button></div>
- </div>
-</form>
+  <table class="tablo1">
+    <tr>
+      <td width="20%"></td>
+      <td align="center" width="5%">First Date</td>
+      <td align="center" width="8%"><input type="date" name="date1"></td>
+      <td width="4%"></td>
+      <td align="center" width="5%">Last Date</td>
+      <td align="center" width="8%"><input type="date" name="date2"></td>
+      <td align="center" width="10%"><input type="submit" name="list" id="list" value="  List  "></td>
+      <td width="40%"></td>
+    </tr>
+  </table>
 
- <div class="row">
-    <div class="col text-left"><b>Tüketim Noktası</b></div>
-    <div class="col text-left"><b>Tüketim</b></div>
-    <div class="col text-left"><b>Tüketim Bütçesi</b></div>
-    <div class="col text-left"><b>Taşıma</b></div>
-    <div class="col text-left"><b>Taşıma Bütçesi</b></div>
- </div>
+<!-- <div class="row">
+    <div class="col text-left"><b>&nbsp;&nbsp;&nbsp;&nbsp;HGF DASHBOARD</b></div>
+    <div class="col text-right"><b>First Date&nbsp;&nbsp;&nbsp;&nbsp;<input type="date" name="date1"></b><b>&nbsp;&nbsp;&nbsp;&nbsp;Last Date&nbsp;&nbsp;&nbsp;&nbsp;<input type="date" name="date2">&nbsp;&nbsp;&nbsp;&nbsp;</b><input type="submit" name="list" id="list" value="  List  "></div> -->
+    <!-- <div class="col text-left"><b>Last Date&nbsp;&nbsp;&nbsp;&nbsp;<input type="date" name="date2">&nbsp;&nbsp;&nbsp;&nbsp;</b></div> -->
+    <!-- <div class="col text-right"><button type="button" class="btn btn-light">Exit</button></div>
+ </div> -->
+</form>
+ <!-- <style>
+ table, th, td {
+   border: 1px solid black;
+ }
+ </style> -->
+
+<table style="width:100%">
+  <tr>
+    <td style="width:20%" align="center">Tüketim Noktası</td>
+    <td style="width:20%" align="center">Tüketim</td>
+    <td style="width:20%" align="center">Tüketim Bütçesi</td>
+    <td style="width:20%" align="center">Taşıma</td>
+    <td style="width:20%" align="center">Toplam</td>
+  <!-- <th style="width:400px"><h6><b>Tüketim Noktası</b></h6></th>
+  <th style="width:400px"><h6><b>Tüketim</b></h6></th>
+  <th style="width:400px"><h6><b>Tüketim Bütçesi</b></h6></th>
+  <th style="width:400px"><h6><b>Taşıma</b></h6></th>
+  <th style="width:400px"><h6><b>Taşıma Bütçesi</b></h6></th> -->
+  </tr>
+  <tr>
+    <td align="left">+ Power Generation Plants</td>
+  </tr>
+  <tr>
+    <td align="left">&nbsp;&nbsp;&nbsp;&nbsp;Baymina</td>
+  </tr>
+  <tr>
+    <td align="left">&nbsp;&nbsp;&nbsp;&nbsp;Delta</td>
+  </tr>
+  <tr>
+    <td align="left">&nbsp;&nbsp;&nbsp;&nbsp;Ales</td>
+  </tr>
+  <tr>
+    <td align="left">+ Natural Gas Distribution Companies</td>
+  </tr>
+</table>
 
 
 
