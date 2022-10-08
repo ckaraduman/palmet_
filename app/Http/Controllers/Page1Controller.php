@@ -8,16 +8,25 @@ class Page1Controller extends Controller
 {
     public function index()
     {
-        $data=DB::table('Points')
-                  -> where('id',60)
-                  -> value('name');
-        //dd($data);
-        //return $data;
+        // --$data=DB::table('Points')
+        //           -> where('id',60)
+        //           -> value('name');
+        // //dd($data);
+        // //return $data;
+        //
+        // //foreach($data1 as $key){
+        // --$ad=$data;
+        // --echo $ad;
+        // --return view('show', compact('ad'));
 
-        //foreach($data1 as $key){
-        $ad=$data;
-        echo $ad;
-        return view('show', compact('ad'));
+        $data=DB::table('GetData')->where('TMP_Tasitan','ELEKTRIK')
+                                  ->where('OkumaTarihi','>=','2022-10-01 08:00:00.000')
+                                  ->sum('Tuketim2');
+        $tuketim=$data;
+        return view('hgf_dashboard', compact('tuketim'));
+
+
+
         }
 
 

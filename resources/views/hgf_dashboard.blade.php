@@ -74,7 +74,7 @@ zoom: 50%; /* Webkit browsers */
   <th style="width:400px"><h6><b>Taşıma Bütçesi</b></h6></th> -->
   </tr>
   <tr>
-    <td align="left"><h6 onclick="change1(this)">- Power Generation Plants</h6></td><td align="center">pgp_tuketim</td>
+    <td align="left"><h6 onclick="change1(this)">- Power Generation Plants</h6></td><td align="center">{{$tuketim}}</td>
   </tr>
   <tr>
     <td id="baymina" align="left">&nbsp;&nbsp;&nbsp;&nbsp;Baymina</td>
