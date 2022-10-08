@@ -11,14 +11,13 @@ class Page1Controller extends Controller
         $data=DB::table('Points')
                   -> where('id',60)
                   -> value('name');
-        $data1=[DB::table('Points')
-                  // -> where('id',60)
-                  -> value('name')];
         //dd($data);
         //return $data;
 
-        foreach($data1 as $key){
-        echo $key;
+        //foreach($data1 as $key){
+        $ad=$data;
+        echo $ad;
+        return view('show', compact('ad'));
         }
 
 
@@ -37,7 +36,7 @@ class Page1Controller extends Controller
         //     echo "</table>";
         // }
 
-    }
+
     public function formtest()
     {
         return view('form');
