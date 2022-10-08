@@ -26,6 +26,11 @@ zoom: 50%; /* Webkit browsers */
 .style1{
   border:1px solid black;
 }
+/* .gas{
+  position: absolute;
+  left: 100px;
+  top: 150px; */
+} */
       </style>
 <body>
 <form method="post">
@@ -72,36 +77,35 @@ zoom: 50%; /* Webkit browsers */
     <td align="left"><h6 onclick="change1(this)">+ Power Generation Plants</h6></td>
   </tr>
   <tr>
-    <td align="left">&nbsp;&nbsp;&nbsp;&nbsp;Baymina</td>
+    <td id="baymina" align="left">&nbsp;&nbsp;&nbsp;&nbsp;Baymina</td>
   </tr>
   <tr>
-    <td align="left">&nbsp;&nbsp;&nbsp;&nbsp;Delta</td>
+    <td id="delta" align="left">&nbsp;&nbsp;&nbsp;&nbsp;Delta</td>
   </tr>
   <tr>
-    <td align="left">&nbsp;&nbsp;&nbsp;&nbsp;Ales</td>
+    <td id="ales" align="left">&nbsp;&nbsp;&nbsp;&nbsp;Ales</td>
   </tr>
   <tr>
-    <td align="left">+ Natural Gas Distribution Companies</td>
+    <td id="gas" align="left">+ Natural Gas Distribution Companies</td>
   </tr>
 </table>
-<!-- <script>
-function change1(id) {
-  if (id.innerHTML=="+ Power Generation Plants") {
-      id.innerHTML = "- Power Generation Plants"
-  } else if (id.innerHTML == "- Power Generation Plants") {
-    id.innerHTML = "+ Power Generation Plants"
-  }
-  // id.innerHTML = "- Power Generation Plants";
-}
-</script> -->
+
 <script>
 function change1(id) {
   if (id.innerHTML=="+ Power Generation Plants") {
       id.innerHTML = "- Power Generation Plants"
+      document.getElementById("baymina").style.visibility = "visible";
+      document.getElementById("delta").style.visibility = "visible";
+      document.getElementById("ales").style.visibility = "visible";
+      document.getElementById("gas").style.top = "180px";
   } else if (id.innerHTML == "- Power Generation Plants") {
-    id.innerHTML = "+ Power Generation Plants"
+    id.innerHTML = "+ Power Generation Plants";
+    document.getElementById("baymina").style.visibility = "hidden";
+    document.getElementById("delta").style.visibility = "hidden";
+    document.getElementById("ales").style.visibility = "hidden";
+    document.getElementById("gas").style.position = "absolute";
+    document.getElementById("gas").style.top = "90px";
   }
-  // id.innerHTML = "- Power Generation Plants";
 }
 </script>
 
