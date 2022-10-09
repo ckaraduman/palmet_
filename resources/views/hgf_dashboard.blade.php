@@ -60,13 +60,17 @@ zoom: 50%; /* Webkit browsers */
  }
  </style> -->
 
-<table style="width:100%">
+<table>
   <tr>
-    <td style="width:20%" align="center">Tüketim Noktası</td>
-    <td style="width:20%" align="center">Tüketim</td>
-    <td style="width:20%" align="center">Tüketim Bütçesi</td>
-    <td style="width:20%" align="center">Taşıma</td>
-    <td style="width:20%" align="center">Toplam</td>
+    <td style="width:500px" align="center">Tüketim Noktası</td>
+    <td style="width:30px" align="center"></td>
+    <td style="width:130px" align="center">Tüketim</td>
+    <td style="width:30px" align="center"></td>
+    <td style="width:130px" align="center">Tüketim Bütçesi</td>
+    <td style="width:30px" align="center"></td>
+    <td style="width:130px" align="center">Taşıma</td>
+    <td style="width:30px" align="center"></td>
+    <td style="width:130px" align="center">Toplam</td>
   <!-- <th style="width:400px"><h6><b>Tüketim Noktası</b></h6></th>
   <th style="width:400px"><h6><b>Tüketim</b></h6></th>
   <th style="width:400px"><h6><b>Tüketim Bütçesi</b></h6></th>
@@ -74,7 +78,7 @@ zoom: 50%; /* Webkit browsers */
   <th style="width:400px"><h6><b>Taşıma Bütçesi</b></h6></th> -->
   </tr>
   <tr>
-    <td align="left"><h6 onclick="change1(this)">- Power Generation Plants</h6></td><td align="center">{{$tuketim}}</td>
+    <td align="left"><h6 onclick="change1(this)">- Power Generation Plants</h6></td><td></td><td align="right">{{number_format($data,2)}}</td><td></td><td align="right">{{number_format($data1,2)}}</td>
   </tr>
   <tr>
     <td id="baymina" align="left">&nbsp;&nbsp;&nbsp;&nbsp;Baymina</td>

@@ -22,8 +22,10 @@ class Page1Controller extends Controller
         $data=DB::table('GetData')->where('TMP_Tasitan','ELEKTRIK')
                                   ->where('OkumaTarihi','>=','2022-10-01 08:00:00.000')
                                   ->sum('Tuketim2');
-        $tuketim=$data;
-        return view('hgf_dashboard', compact('tuketim'));
+        $data1=DB::table('GetData')->where('TMP_Tasitan','ELEKTRIK')
+                                  ->where('OkumaTarihi','>=','2022-10-01 08:00:00.000')
+                                  ->sum('GunlukButceSm3');
+        return view('hgf_dashboard', compact('data','data1'));
 
 
 
