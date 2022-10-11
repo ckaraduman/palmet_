@@ -24,10 +24,14 @@ Route::get('/test', function () {
     return view('test');
 })->name('test');
 
-Route::get('page2', function () {
+Route::any('page2}', function () {
     return view('index');
-});
+})->name("page2");
 
-Route::get('page1', 'App\Http\Controllers\Page1Controller@index');
+Route::any('page1', 'App\Http\Controllers\Page1Controller@index');
 
 Route::any('form', 'App\Http\Controllers\Page1Controller@formtest');
+
+Route::any('page', 'App\Http\Controllers\Page1Controller@page')->name('page');
+
+Route::any('test1', 'App\Http\Controllers\Page1Controller@deneme')->name('test1');

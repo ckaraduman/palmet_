@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 class Page1Controller extends Controller
@@ -48,9 +49,26 @@ class Page1Controller extends Controller
         // }
 
 
+    public function page()
+    {
+        return view('index');
+    }
     public function formtest()
     {
         return view('form');
     }
-
+    public function deneme(Request $request)
+    {
+        // return view('test1');
+        // dd($request);
+        // return $request->all();
+        echo $request->input('date1');
+        echo '<br>';
+        echo $request->input('date2');
+        echo '<br>';
+        echo '<br>';
+        echo $request->date1;
+        echo '<br>';
+        echo $request->date2;
+    }
 }

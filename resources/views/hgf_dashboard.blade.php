@@ -33,7 +33,7 @@ zoom: 50%; /* Webkit browsers */
 } */
       </style>
 <body>
-<form method="post">
+<form action="{{route('test1')}}" method="post">
   @CSRF
   <table class="tablo1">
     <tr>
