@@ -24,9 +24,9 @@ Route::get('/test', function () {
     return view('test');
 })->name('test');
 
-Route::any('page2}', function () {
+Route::any('/page2', function () {
     return view('index');
-})->name("page2");
+})->name('page2');
 
 Route::any('page1', 'App\Http\Controllers\Page1Controller@index');
 
@@ -35,3 +35,29 @@ Route::any('form', 'App\Http\Controllers\Page1Controller@formtest');
 Route::any('page', 'App\Http\Controllers\Page1Controller@page')->name('page');
 
 Route::any('test1', 'App\Http\Controllers\Page1Controller@deneme')->name('test1');
+
+// Route::get('/portal', function () {
+//     $data=[
+//       "ad"=>"cem",
+//       "soyad"=>"karaduman",
+//       "tckimlik"=>47557427034
+//     ];
+//     return view('portal', $data);
+// });
+
+Route::get('/portal', function () {
+    $data=[
+      "ad"=>"cem",
+      "soyad"=>"karaduman",
+      "tckimlik"=>47557427034
+    ];
+    return view('portal', compact('data'));
+});
+
+Route::get('/orbit', function () {
+    $data=[
+    "tarih1"=>"2022-10-01",
+    "tarih2"=>"2022-10-20"
+  ];
+    return view('orbit',$data);
+});

@@ -33,9 +33,9 @@ zoom: 50%; /* Webkit browsers */
 } */
       </style>
 <body>
-<form method="post">
+<!-- <form method="post"> -->
   @CSRF
-  <table class="tablo1">
+  <!-- <table class="tablo1">
     <tr>
       <td width="20%"></td>
       <td align="center" width="5%">First Date</td>
@@ -45,37 +45,15 @@ zoom: 50%; /* Webkit browsers */
       <td align="center" width="8%"><input type="date" name="date2"></td>
       <td align="center" width="10%"><input type="submit" name="list" id="list" value="  List  "></td>
       <td width="40%"></td>
-      <?php
-      $date1 = $date2 = "";
-      if ($_SERVER["REQUEST_METHOD"] == "POST") {
-              $date1 = $_POST["date1"];
-              $date2 = $_POST["date2"];
-
-              $data=DB::table('GetData')->where('TMP_Tasitan','ELEKTRIK')
-                                        ->whereBetween('OkumaTarihi', [$date1.' 08:00:00.000', $date2.' 08:00:00.000'])
-                                        ->sum('Tuketim2');
-              $data1=DB::table('GetData')->where('TMP_Tasitan','ELEKTRIK')
-                                        ->whereBetween('OkumaTarihi', [$date1.' 08:00:00.000', $date2.' 08:00:00.000'])
-                                        ->sum('GunlukButceSm3');
-
-
-
-
-              // $email = test_input($_POST["email"]);
-              // $review = test_input($_POST["review"]);
-              // $level = test_input($_POST["level"]);
-            }
-            // echo $date;
-      ?>
     </tr>
-  </table>
+  </table> -->
 <!-- <div class="row">
     <div class="col text-left"><b>&nbsp;&nbsp;&nbsp;&nbsp;HGF DASHBOARD</b></div>
     <div class="col text-right"><b>First Date&nbsp;&nbsp;&nbsp;&nbsp;<input type="date" name="date1"></b><b>&nbsp;&nbsp;&nbsp;&nbsp;Last Date&nbsp;&nbsp;&nbsp;&nbsp;<input type="date" name="date2">&nbsp;&nbsp;&nbsp;&nbsp;</b><input type="submit" name="list" id="list" value="  List  "></div> -->
     <!-- <div class="col text-left"><b>Last Date&nbsp;&nbsp;&nbsp;&nbsp;<input type="date" name="date2">&nbsp;&nbsp;&nbsp;&nbsp;</b></div> -->
     <!-- <div class="col text-right"><button type="button" class="btn btn-light">Exit</button></div>
  </div> -->
-</form>
+<!-- </form> -->
  <!-- <style>
  table, th, td {
    border: 1px solid black;
@@ -101,7 +79,7 @@ zoom: 50%; /* Webkit browsers */
   </tr>
   <tr>
 
-  <td align="left"><h6 onclick="change1(this)">- Power Generation Plants</h6></td><td></td><td align="right">{{number_format($data,2)}}</td><td></td><td align="right">{{number_format($data1,2)}}</td>
+    <td align="left"><h6 onclick="change1(this)">- Power Generation Plants</h6></td><td></td><td align="right">{{$tarih1}}</td><td></td><td align="right">{{$tarih2}}</td>
 
 
   </tr>
@@ -138,7 +116,23 @@ function change1(id) {
 }
 </script>
 
+  <?php
 
-  {{$date1}}    {{$date2}}
+          $data=DB::table('GetData')->where('TMP_Tasitan','ELEKTRIK')
+                                    ->where('OkumaTarihi',$tarih1)
+                                    ->sum('Tuketim2');
+          $data1=DB::table('GetData')->where('TMP_Tasitan','ELEKTRIK')
+                                    ->where('OkumaTarihi',$tarih2)
+                                    ->sum('GunlukButceSm3');
+
+           request($data);
+
+
+          // $email = test_input($_POST["email"]);
+          // $review = test_input($_POST["review"]);
+          // $level = test_input($_POST["level"]);
+        // echo $date;
+  ?>
+  {{$data}}    {{$data1}}
   </body>
 </html>
