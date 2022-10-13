@@ -28,7 +28,7 @@ Route::any('/page2', function () {
     return view('index');
 })->name('page2');
 
-Route::any('page1', 'App\Http\Controllers\Page1Controller@index');
+Route::any('page1', 'App\Http\Controllers\Page1Controller@index')->name('page1');
 
 Route::any('form', 'App\Http\Controllers\Page1Controller@formtest');
 
