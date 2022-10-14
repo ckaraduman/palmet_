@@ -12,15 +12,22 @@ class Page1Controller extends Controller
         // Bu çalışan fonksiyon. Parametre alarak işlem yapan fonksiyon için yedeklendi--start1
         public function index()
         {
-        $data=DB::table('GetData')->where('TMP_Tasitan','ELEKTRIK')
+        $pgp_cons=DB::table('GetData')->where('TMP_Tasitan','ELEKTRIK')
                                   ->where('OkumaTarihi','>=','2022-10-01 08:00:00.000')
                                   ->where('OkumaTarihi','<=','2022-10-10 08:00:00.000')
                                   ->sum('Tuketim2');
-        $data1=DB::table('GetData')->where('TMP_Tasitan','ELEKTRIK')
+        $pgp_budget=DB::table('GetData')->where('TMP_Tasitan','ELEKTRIK')
                                   ->where('OkumaTarihi','>=','2022-10-01 08:00:00.000')
                                   ->where('OkumaTarihi','<=','2022-10-10 08:00:00.000')
                                   ->sum('GunlukButceSm3');
-        return view('hgf_dashboard', compact('data','data1'));
+        $pgp_total=$pgp_cons+$pgp_budget;
+        $baymina_cons=DB::table('GetData')->where('IstasyonAdi','BAYMINA')
+                                  ->whereBetween('OkumaTarihi', ['2022-10-01 08:00:00.000','2022-10-10 08:00:00.000'])
+                                  ->sum('Tuketim2');
+        $baymina_budget=DB::table('GetData')->where('IstasyonAdi','BAYMINA')
+                                  ->whereBetween('OkumaTarihi', ['2022-10-01 08:00:00.000', '2022-10-10 08:00:00.000'])
+                                  ->sum('GunlukButceSm3');
+        return view('hgf_dashboard', compact('pgp_cons','pgp_budget','baymina_cons', 'baymina_budget'));
         }
         // Bu çalışan fonksiyon. Parametre alarak işlem yapan fonksiyon için yedeklendi--end1
         // -------------------------------------------------------------------------------------

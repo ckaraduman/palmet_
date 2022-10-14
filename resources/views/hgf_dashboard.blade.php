@@ -5,6 +5,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
+<title>Palmet</title>
 <style type="text/css">
 body {
 -moz-transform: scale(0.8, 0.8); /* Moz-browsers */
@@ -51,14 +52,19 @@ zoom: 50%; /* Webkit browsers */
               $date1 = $_POST["date1"];
               $date2 = $_POST["date2"];
 
-              $data=DB::table('GetData')->where('TMP_Tasitan','ELEKTRIK')
+              $pgp_cons=DB::table('GetData')->where('TMP_Tasitan','ELEKTRIK')
                                         ->whereBetween('OkumaTarihi', [$date1.' 08:00:00.000', $date2.' 08:00:00.000'])
                                         ->sum('Tuketim2');
-              $data1=DB::table('GetData')->where('TMP_Tasitan','ELEKTRIK')
+              $pgp_budget=DB::table('GetData')->where('TMP_Tasitan','ELEKTRIK')
                                         ->whereBetween('OkumaTarihi', [$date1.' 08:00:00.000', $date2.' 08:00:00.000'])
                                         ->sum('GunlukButceSm3');
-
-
+              $pgp_total=$pgp_cons+$pgp_budget;
+              $baymina_cons=DB::table('GetData')->where('IstasyonAdi','BAYMINA')
+                                        ->whereBetween('OkumaTarihi', [$date1.' 08:00:00.000', $date2.' 08:00:00.000'])
+                                        ->sum('Tuketim2');
+              $baymina_budget=DB::table('GetData')->where('IstasyonAdi','BAYMINA')
+                                        ->whereBetween('OkumaTarihi', [$date1.' 08:00:00.000', $date2.' 08:00:00.000'])
+                                        ->sum('GunlukButceSm3');
 
 
               // $email = test_input($_POST["email"]);
@@ -81,18 +87,17 @@ zoom: 50%; /* Webkit browsers */
    border: 1px solid black;
  }
  </style> -->
-
 <table>
   <tr>
     <td style="width:500px" align="center">Tüketim Noktası</td>
     <td style="width:30px" align="center"></td>
-    <td style="width:130px" align="center">Tüketim</td>
+    <td style="width:160px" align="center">Tüketim (sm3)</td>
     <td style="width:30px" align="center"></td>
-    <td style="width:130px" align="center">Tüketim Bütçesi</td>
+    <td style="width:160px" align="center">Tüketim Bütçesi (sm3)</td>
     <td style="width:30px" align="center"></td>
-    <td style="width:130px" align="center">Taşıma</td>
+    <td style="width:160px" align="center">Taşıma (sm3)</td>
     <td style="width:30px" align="center"></td>
-    <td style="width:130px" align="center">Toplam</td>
+    <td style="width:160px" align="center">Toplam (sm3)</td>
   <!-- <th style="width:400px"><h6><b>Tüketim Noktası</b></h6></th>
   <th style="width:400px"><h6><b>Tüketim</b></h6></th>
   <th style="width:400px"><h6><b>Tüketim Bütçesi</b></h6></th>
@@ -100,13 +105,10 @@ zoom: 50%; /* Webkit browsers */
   <th style="width:400px"><h6><b>Taşıma Bütçesi</b></h6></th> -->
   </tr>
   <tr>
-
-  <td align="left"><h6 onclick="change1(this)">- Power Generation Plants</h6></td><td></td><td align="right">{{number_format($data,2)}}</td><td></td><td align="right">{{number_format($data1,2)}}</td>
-
-
+  <td align="left"><h6 onclick="change1(this)">- Power Generation Plants</h6></td><td></td><td align="right">{{number_format($pgp_cons,2)}}</td><td></td><td align="right">{{number_format($pgp_budget,2)}}</td>
   </tr>
   <tr>
-    <td id="baymina" align="left">&nbsp;&nbsp;&nbsp;&nbsp;Baymina</td>
+    <td id="baymina" align="left">&nbsp;&nbsp;&nbsp;&nbsp;Baymina</td></td><td></td><td id="baymina_cons" align="right">{{number_format($baymina_cons,2)}}</td><td></td><td id="baymina_budget" align="right">{{number_format($baymina_budget,2)}}</td>
   </tr>
   <tr>
     <td id="delta" align="left">&nbsp;&nbsp;&nbsp;&nbsp;Delta</td>
@@ -118,7 +120,6 @@ zoom: 50%; /* Webkit browsers */
     <td id="gas" align="left">+ Natural Gas Distribution Companies</td>
   </tr>
 </table>
-
 <script>
 function change1(id) {
   if (id.innerHTML=="+ Power Generation Plants") {
@@ -127,6 +128,8 @@ function change1(id) {
       document.getElementById("delta").style.visibility = "visible";
       document.getElementById("ales").style.visibility = "visible";
       document.getElementById("gas").style.top = "180px";
+      document.getElementById("baymina_cons").style.visibility = "visible";
+      document.getElementById("baymina_budget").style.visibility = "visible";
   } else if (id.innerHTML == "- Power Generation Plants") {
     id.innerHTML = "+ Power Generation Plants";
     document.getElementById("baymina").style.visibility = "hidden";
@@ -134,11 +137,17 @@ function change1(id) {
     document.getElementById("ales").style.visibility = "hidden";
     document.getElementById("gas").style.position = "absolute";
     document.getElementById("gas").style.top = "90px";
+    document.getElementById("baymina_cons").style.visibility = "hidden";
+    document.getElementById("baymina_budget").style.visibility = "hidden";
   }
 }
 </script>
 
+  {{number_format($pgp_cons,2)}} <br>
+  {{number_format($pgp_budget,2)}} <br>
 
-  {{$date1}}    {{$date2}}
+  {{number_format($baymina_cons,2)}} <br>
+  {{number_format($baymina_budget,2)}} <br>
+  {{$date1}} <br>   {{$date2}}
   </body>
 </html>
