@@ -30,7 +30,7 @@ zoom: 50%; /* Webkit browsers */
 /* .gas{
   position: absolute;
   left: 100px;
-  top: 150px; */
+  top: 150px;
 } */
       </style>
 <body>
@@ -142,7 +142,7 @@ function change1(id) {
   }
 }
 </script>
-
+  <br><br><br><br><br>
   {{number_format($pgp_cons,2)}} <br>
   {{number_format($pgp_budget,2)}} <br>
 

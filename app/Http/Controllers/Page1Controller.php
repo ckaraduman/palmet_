@@ -67,20 +67,29 @@ class Page1Controller extends Controller
     }
     // -------------------------------------------------------------------------------------
     // Testler için kullanılan ve alınan dataları ekrana yazdıran kısım ------------ start2
-    public function deneme(Request $request)
+    public function deneme()
     {
         // return view('test1');
         // dd($request);
         // return $request->all();
-        echo $request->input('date1');
-        echo '<br>';
-        echo $request->input('date2');
-        echo '<br>';
-        echo '<br>';
-        echo $request->date1;
-        echo '<br>';
-        echo $request->date2;
+        // echo $request->input('date1');
+        // echo '<br>';
+        // echo $request->input('date2');
+        // echo '<br>';
+        // echo '<br>';
+        // echo $request->date1;
+        // echo '<br>';
+        // echo $request->date2;
+        return view('test1');
     }
     // -------------------------------------------------------------------------------------
     // Testler için kullanılan ve alınan dataları ekrana yazdıran kısım -------------- end2
+    public function help()
+    {
+        return view('help');
+    }
+
+
+
+
 }

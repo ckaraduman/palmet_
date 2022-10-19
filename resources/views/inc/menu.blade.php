@@ -1,13 +1,20 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
+<!doctype html>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="{{Route('main')}}">Ana Sayfa</a>
+    <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button> -->
+  </div>
+</nav>
+<html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Palmet WebSites</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Palmet Digital</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
   </head>
   <body>
-    <li><a href="https://www.palmet.com" target="_blank">Palmet Enerji</a></li>
-    <li><a href="https://www.palmetmuhendislik.com" target="_blank">Palmet Mühendislik</a></li>
-    <li><a href="https://www.palmetinternational.com" target="_blank">Palmet International</a></li>
-    <li><a href="https://www.aleseu.com" target="_blank">Ales Elektrik Üretim A.Ş.</a></li>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
   </body>
 </html>

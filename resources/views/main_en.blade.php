@@ -25,69 +25,73 @@
 
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Yardım Masası
+            HelpDesk
           </a>
           <ul class="dropdown-menu dropdown-menu-dark">
-            <li><a class="dropdown-item" href="{{route('help')}}">Yardım İstekleri</a></li>
-            <li><a class="dropdown-item" href="#">Talepler</a></li>
-            <li><a class="dropdown-item" href="#">Ürün/Hizmet Talebi</a></li>
-            <li><a class="dropdown-item" href="#">Öneriler</a></li>
-            <li><a class="dropdown-item" href="#">Bildirimler</a></li>
-            <li><a class="dropdown-item" href="#">Şikayetler</a></li>
+            <li><a class="dropdown-item" href="{{route('page1')}}">Help Request</a></li>
+            <li><a class="dropdown-item" href="#">Request</a></li>
+            <li><a class="dropdown-item" href="#">Product/Service Request</a></li>
+            <li><a class="dropdown-item" href="#">Suggestions</a></li>
+            <li><a class="dropdown-item" href="#">Notifications</a></li>
+            <li><a class="dropdown-item" href="#">Complaints</a></li>
           </ul>
         </li>
 
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Rehber Hizmetler
+            Routine
           </a>
           <ul class="dropdown-menu dropdown-menu-dark">
-            <li><a class="dropdown-item" href="{{route('page1')}}" target="_blank">İletişim Bilgileri</a></li>
-            <li><a class="dropdown-item" href="{{route('WebSites')}}" target="_blank">Web Sitelerimiz</a></li>
+            <li><a class="dropdown-item" href="{{route('page1')}}" target="_blank">Contact</a></li>
+            <li><a class="dropdown-item" href="{{route('WebSites')}} target="_blank">WebSites</a></li>
+            <li><a class="dropdown-item" href="#">Guide</a></li>
           </ul>
         </li>
 
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Tüketim Verileri
+            Action
           </a>
           <ul class="dropdown-menu dropdown-menu-dark">
-            <li><a class="dropdown-item" href="{{route('page1')}}">Gaz Akış Tabloları</a></li>
-            <li><a class="dropdown-item" href="#">Tüketim Noktaları</a></li>
-            <li><a class="dropdown-item" href="#">Ayarlar</a></li>
+            <li><a class="dropdown-item" href="{{route('page1')}}">HGF DashBoard</a></li>
+            <li><a class="dropdown-item" href="#">Consumption Point</a></li>
+            <li><a class="dropdown-item" href="#">Settings</a></li>
           </ul>
         </li>
 
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Kaynak Yönetimi
+            Asset Management
           </a>
           <ul class="dropdown-menu dropdown-menu-dark">
-            <li><a class="dropdown-item" href="{{route('page1')}}">Kaynaklar</a></li>
-            <li><a class="dropdown-item" href="#">Kaynak Kullanımı</a></li>
-            <li><a class="dropdown-item" href="#">Ayarlar</a></li>
+            <li><a class="dropdown-item" href="{{route('page1')}}">IT HW Asset</a></li>
+            <li><a class="dropdown-item" href="#">IT SW Asset</a></li>
+            <li><a class="dropdown-item" href="#">Resources</a></li>
           </ul>
         </li>
 
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Varlık Yönetimi
+            Documentation
           </a>
           <ul class="dropdown-menu dropdown-menu-dark">
-            <li><a class="dropdown-item" href="{{route('page1')}}">IT-Donanım Varlıkları</a></li>
-            <li><a class="dropdown-item" href="#">IT-Yazılım Varlıkları</a></li>
-            <li><a class="dropdown-item" href="#">Diğer Kaynaklar</a></li>
+            <li><a class="dropdown-item" href="{{route('page1')}}">Project</a></li>
+            <li><a class="dropdown-item" href="#">Documents</a></li>
+            <li><a class="dropdown-item" href="#">References</a></li>
           </ul>
         </li>
 
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Kütüphane
+            HelpDesk
           </a>
           <ul class="dropdown-menu dropdown-menu-dark">
-            <li><a class="dropdown-item" href="{{route('page1')}}">Projeler</a></li>
-            <li><a class="dropdown-item" href="#">Belgeler</a></li>
-            <li><a class="dropdown-item" href="#">Referanslar</a></li>
+            <li><a class="dropdown-item" href="{{route('page1')}}">Help Request</a></li>
+            <li><a class="dropdown-item" href="#">Request</a></li>
+            <li><a class="dropdown-item" href="#">Product/Service Request</a></li>
+            <li><a class="dropdown-item" href="#">Suggestions</a></li>
+            <li><a class="dropdown-item" href="#">Notifications</a></li>
+            <li><a class="dropdown-item" href="#">Complaints</a></li>
           </ul>
         </li>
 

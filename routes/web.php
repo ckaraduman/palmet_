@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('main');
-});
+})->name('main');
 Route::any('/hgf_dashboard', function () {
     return view('hgf_dashboard');
 })->name('hgf');
@@ -33,6 +33,8 @@ Route::any('/WebSites', function () {
 })->name('WebSites');
 
 Route::any('hgf', 'App\Http\Controllers\Page1Controller@index')->name('page1');
+
+Route::any('help', 'App\Http\Controllers\Page1Controller@help')->name('help');
 
 Route::any('form', 'App\Http\Controllers\Page1Controller@formtest');
 

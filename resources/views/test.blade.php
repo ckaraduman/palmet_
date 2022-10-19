@@ -18,8 +18,8 @@ zoom: 80%; /* Webkit browsers */
     <div class="col text-left"><b>&nbsp;&nbsp;&nbsp;&nbsp;HGF DASHBOARD</b></div>
     <div class="col text-right"><b>First Date&nbsp;&nbsp;&nbsp;&nbsp;<input type="date" name="date1"></b><b>&nbsp;&nbsp;&nbsp;&nbsp;Last Date&nbsp;&nbsp;&nbsp;&nbsp;<input type="date" name="date2">&nbsp;&nbsp;&nbsp;&nbsp;</b><input type="submit" name="list" id="list" value="  List  "></div>
     <!-- <div class="col text-left"><b>Last Date&nbsp;&nbsp;&nbsp;&nbsp;<input type="date" name="date2">&nbsp;&nbsp;&nbsp;&nbsp;</b></div> -->
-    <div class="col text-right"><button type="button" class="btn btn-light">Exit</button></div> 
- </div> 
+    <div class="col text-right"><button type="button" class="btn btn-light">Exit</button></div>
+ </div>
 
 
 
