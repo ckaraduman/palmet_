@@ -27,7 +27,8 @@ class Page1Controller extends Controller
         $baymina_budget=DB::table('GetData')->where('IstasyonAdi','BAYMINA')
                                   ->whereBetween('OkumaTarihi', ['2022-10-01 08:00:00.000', '2022-10-10 08:00:00.000'])
                                   ->sum('GunlukButceSm3');
-        return view('hgf_dashboard', compact('pgp_cons','pgp_budget','baymina_cons', 'baymina_budget'));
+        $test_cem='';
+        return view('hgf_dashboard', compact('pgp_cons','pgp_budget','baymina_cons', 'baymina_budget', 'test_cem'));
         }
         // Bu çalışan fonksiyon. Parametre alarak işlem yapan fonksiyon için yedeklendi--end1
         // -------------------------------------------------------------------------------------

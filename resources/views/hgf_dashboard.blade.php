@@ -52,7 +52,7 @@ zoom: 50%; /* Webkit browsers */
               $date1 = $_POST["date1"];
               $date2 = $_POST["date2"];
 
-              $pgp_cons=DB::table('GetData')->where('TMP_Tasitan','ELEKTRIK')
+              $pgp_cons=DB::connection('sqlsrv')->table('GetData')->where('TMP_Tasitan','ELEKTRIK')
                                         ->whereBetween('OkumaTarihi', [$date1.' 08:00:00.000', $date2.' 08:00:00.000'])
                                         ->sum('Tuketim2');
               $pgp_budget=DB::table('GetData')->where('TMP_Tasitan','ELEKTRIK')
@@ -65,7 +65,15 @@ zoom: 50%; /* Webkit browsers */
               $baymina_budget=DB::table('GetData')->where('IstasyonAdi','BAYMINA')
                                         ->whereBetween('OkumaTarihi', [$date1.' 08:00:00.000', $date2.' 08:00:00.000'])
                                         ->sum('GunlukButceSm3');
+              // $test_cem=DB::connection('mysql')->table('test')->where('id','3')
+              //                            ->value('name');
+              $test_cem=DB::connection('mysql')->table('test')
+                                               ->where('id',2)
+                                               ->value('name');
+              echo $test_cem;
 
+              // $test_cem=DB::connection('mysql')->table('test')->where('id',1)
+              //                           ->value('name');
 
               // $email = test_input($_POST["email"]);
               // $review = test_input($_POST["review"]);
@@ -111,7 +119,7 @@ zoom: 50%; /* Webkit browsers */
     <td id="baymina" align="left">&nbsp;&nbsp;&nbsp;&nbsp;Baymina</td></td><td></td><td id="baymina_cons" align="right">{{number_format($baymina_cons,2)}}</td><td></td><td id="baymina_budget" align="right">{{number_format($baymina_budget,2)}}</td>
   </tr>
   <tr>
-    <td id="delta" align="left">&nbsp;&nbsp;&nbsp;&nbsp;Delta</td>
+
   </tr>
   <tr>
     <td id="ales" align="left">&nbsp;&nbsp;&nbsp;&nbsp;Ales</td>
@@ -143,11 +151,12 @@ function change1(id) {
 }
 </script>
   <br><br><br><br><br>
+  {{$test_cem}}
   {{number_format($pgp_cons,2)}} <br>
   {{number_format($pgp_budget,2)}} <br>
 
   {{number_format($baymina_cons,2)}} <br>
   {{number_format($baymina_budget,2)}} <br>
-  {{$date1}} <br>   {{$date2}}
+  {{$date1}} <br>   {{$date2}} <br>
   </body>
 </html>
